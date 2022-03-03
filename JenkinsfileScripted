@@ -1,0 +1,15 @@
+node ('built-in'){
+    stage('clone repository') {               
+        checkout scm    
+    } 
+
+    stage('show env var') {
+        echo '${env.WORKSPACE}'
+    }
+
+    stage('run script') {         
+        sh 'chmod +x HelloWorld.sh'
+        sh 'ls'
+        sh './HelloWorld.sh'   
+    }  
+}
