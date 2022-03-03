@@ -4,7 +4,7 @@ node ('built-in'){
     } 
 
     stage('show env var') {
-        echo '${env.WORKSPACE}'
+        echo ${env.WORKSPACE}
     }
 
     stage('run script') {         
