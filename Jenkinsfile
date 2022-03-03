@@ -13,8 +13,11 @@ pipeline {
         }
         
         stage('run script') {
+            agent {
+                label 'built-in'
+            }
             steps {
-                sh 'pwd'
+                sh 'ls'
                 sh 'HelloWorld.sh'
             }
         }
