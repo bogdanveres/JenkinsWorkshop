@@ -17,6 +17,7 @@ pipeline {
                 label 'built-in'
             }
             steps {
+                sh 'git add --chmod=+x "HelloWorld.sh"'
                 sh 'ls'
                 sh './HelloWorld.sh'
             }
