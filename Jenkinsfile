@@ -18,7 +18,7 @@ pipeline {
             }
             steps {
                 sh 'ls'
-                sh 'HelloWorld.sh'
+                sh './HelloWorld.sh'
             }
         }
     }
