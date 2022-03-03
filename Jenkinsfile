@@ -7,7 +7,7 @@ pipeline {
             }
             
             steps {
-                //cleanWs()
+                cleanWs()
             }
         }
         
