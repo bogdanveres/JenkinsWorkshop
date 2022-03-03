@@ -13,6 +13,7 @@ pipeline {
         
         stage('run script') {
             steps {
+                sh 'pwd'
                 sh 'HelloWorld.sh'
             }
         }
