@@ -7,7 +7,8 @@ pipeline {
             }
             
             steps {
-                cleanWs()
+                sh 'echo CLEAN'
+                //cleanWs()
             }
         }
         
