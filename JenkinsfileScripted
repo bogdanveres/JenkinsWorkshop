@@ -4,12 +4,17 @@ node ('built-in'){
     } 
 
     stage('show env var') {
-        sh 'echo "${env.WORKSPACE}"'
+        sh "echo ${env.WORKSPACE}"
     }
 
     stage('run script') {         
         sh 'chmod +x HelloWorld.sh'
         sh 'ls'
         sh './HelloWorld.sh'   
-    }  
+    }
+    
+    stage('Clean up Workspace')
+    {
+        cleanWs deleteDirs: true
+    }
 }
